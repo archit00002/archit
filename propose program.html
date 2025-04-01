@@ -1,0 +1,461 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Marry Me?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #yesButton {
+            background-color: #4CAF50; /* Green */
+            color: pink;
+        }
+
+        #noButton {
+            background-color: #f44336; /* Red */
+            color: black;
+            position: absolute; /* Allow movement */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you marry me?</h1>
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            alert('Yay! She said yes! 💍');
+        });
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            moveNoButton();
+        });
+
+        function moveNoButton() {
+            const noButton = document.getElementById('noButton');
+            const container = document.querySelector('.container');
+            
+            // Get the dimensions of the container
+            const containerWidth = window.innerWidth;
+            const containerHeight = window.innerHeight;
+
+            // Get the dimensions of the button
+            const buttonWidth = noButton.clientWidth;
+            const buttonHeight = noButton.clientHeight;
+
+            // Calculate random positions
+            const randomX = Math.random() * (containerWidth - buttonWidth);
+            const randomY = Math.random() * (containerHeight - buttonHeight);
+
+            // Set the new position
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        }
+    </script>
+</body>
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Marry Me?</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f7f7f7;
+      text-align: center;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #noBtn:hover {
+      transform: scale(1.1);
+    }
+
+    #yesBtn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Will You Marry Me?</h1>
+    <button id="yesBtn" class="btn">Yes</button>
+    <button id="noBtn" class="btn">No</button>
+  </div>
+
+  <script>
+    document.getElementById("yesBtn").addEventListener("click", function() {
+      alert("Yay! She said Yes!");
+      // You can redirect to a new page or do something special here.
+    });
+
+    document.getElementById("noBtn").addEventListener("click", function() {
+      changeButtonPosition();
+    });
+
+    function changeButtonPosition() {
+      // Get the container and button positions
+      const noBtn = document.getElementById("noBtn");
+      const container = document.querySelector(".container");
+      
+      // Get random positions within the container
+      const containerWidth = container.offsetWidth;
+      const containerHeight = container.offsetHeight;
+
+      const randomX = Math.random() * (containerWidth - noBtn.offsetWidth);
+      const randomY = Math.random() * (containerHeight - noBtn.offsetHeight);
+
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = randomX + 'px';
+      noBtn.style.top = randomY + 'px';
+    }
+  </script>
+</body>
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💍?</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400&display=swap');
+
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #4CAF50;
+            --background-color: linear-gradient(135deg, #fff0f5, #e6e6fa);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: var(--background-color);
+            font-family: 'Roboto', sans-serif;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            position: relative;
+            max-width: 500px;
+            width: 90%;
+            transition: all 0.5s ease;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--primary-color);
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #yesButton {
+            background-color: var(--secondary-color);
+            color: white;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        #noButton {
+            background-color: #f44336;
+            color: white;
+            box-shadow: 0 5px 15px rgba(244, 67, 54, 0.4);
+            position: absolute;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        #hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff69b4"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+            background-size: contain;
+            animation: float 3s infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes sparkle {
+            0% { transform: scale(0) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(180deg); }
+            100% { transform: scale(1) rotate(360deg); }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            animation: bounce 0.8s;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-30px);}
+            60% {transform: translateY(-15px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>will you be mine?</h1>
+        <div class="button-container">
+            <button id="yesButton">Yes, I Will!</button>
+            <button id="noButton">No</button>
+        </div>
+    </div>
+
+    <div id="hearts"></div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 style="color: var(--primary-color); margin-bottom: 20px;">💍 Congratulations! 💍</h2>
+            <p style="font-size: 18px; margin-bottom: 20px;">Thankyou so much for comming into my life!</p>
+            <button id="closeModal" style="background-color: var(--primary-color); color: white;">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        const modal = document.getElementById('modal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const heartsContainer = document.getElementById('hearts');
+
+        // Prevent the No button from being clicked too close to Yes button
+        let lastMoveTime = 0;
+
+        function createHearts() {
+            const numHearts = 500;
+            for (let i = 0; i < numHearts; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.top = `${Math.random() * 100}%`;
+                heart.style.animationDelay = `${Math.random() * 3}s`;
+                heart.style.transform = `scale(${0.5 + Math.random() * 0.5})`;
+                heartsContainer.appendChild(heart);
+            }
+        }
+
+        function moveNoButton(event) {
+            const currentTime = Date.now();
+            
+            // Prevent too frequent moves
+            if (currentTime - lastMoveTime < 100) return;
+            lastMoveTime = currentTime;
+
+            const containerWidth = window.innerWidth;
+            const containerHeight = window.innerHeight;
+            const buttonWidth = noButton.clientWidth;
+            const buttonHeight = noButton.clientHeight;
+
+            // Ensure the button stays within the viewport
+            const randomX = Math.max(0, Math.min(
+                Math.random() * (containerWidth - buttonWidth), 
+                containerWidth - buttonWidth
+            ));
+            const randomY = Math.max(0, Math.min(
+                Math.random() * (containerHeight - buttonHeight), 
+                containerHeight - buttonHeight
+            ));
+
+            // Add some playful animations
+            noButton.style.transition = 'all 0.3s ease';
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+            noButton.classList.add('animate__animated', 'animate__wobble');
+            
+            setTimeout(() => {
+                noButton.classList.remove('animate__animated', 'animate__wobble');
+            }, 1000);
+        }
+
+        yesButton.addEventListener('click', () => {
+            createHearts();
+            modal.style.display = 'flex';
+        });
+
+        noButton.addEventListener('mouseover', moveNoButton);
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal if clicked outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
